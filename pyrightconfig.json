@@ -1,0 +1,10 @@
+{
+  "reportUnusedExpression": "information",
+  "reportUnusedFunction": "information",
+  "reportMissingTypeStubs": "information",
+  "reportUnusedImport": "warning",
+  "reportPrivateUsage": "warning",
+  "reportUnnecessaryIsInstance": "warning",
+  "reportUnknownMemberType": "information",
+  "reportUnknownVariableType": "information",
+}
