@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def start():
+def aff_pop():
     '''
     Plot the population projections for France and Germany
     '''
@@ -34,6 +34,6 @@ def start():
 
 
 if __name__ == "__main__":
-    start()
+    aff_pop()
 
 __all__ = "aff_pop",

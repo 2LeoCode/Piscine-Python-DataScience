@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def start():
+def aff_life():
     """
     Plot the life expectancy projections for France.
     """
@@ -21,6 +21,6 @@ def start():
 
 
 if __name__ == "__main__":
-    start()
+    aff_life()
 
 __all__ = "aff_life",
