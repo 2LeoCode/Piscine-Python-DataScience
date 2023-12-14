@@ -3,11 +3,12 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def aff_life():
+def start():
     """
     Plot the life expectancy projections for France.
     """
-    data = csv.load("life_expectancy_years.csv")
+    if (data := csv.load("life_expectancy_years.csv")) is None:
+        exit(1)
 
     x = data.columns.values[1:].astype(np.int16)
     y = data.query("country == 'France'").values[0, 1:].astype(np.float32)
@@ -20,6 +21,6 @@ def aff_life():
 
 
 if __name__ == "__main__":
-    aff_life()
+    start()
 
 __all__ = "aff_life",

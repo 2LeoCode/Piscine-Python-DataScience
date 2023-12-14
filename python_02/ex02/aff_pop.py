@@ -3,11 +3,13 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def aff_pop():
+def start():
     '''
     Plot the population projections for France and Germany
     '''
-    data = csv.load("population_total.csv")
+    if (data := csv.load("population_total.csv")) is None:
+        exit(1)
+
     print(data)
 
     x = data.columns.values[1:].astype(np.int16)
@@ -32,6 +34,6 @@ def aff_pop():
 
 
 if __name__ == "__main__":
-    aff_pop()
+    start()
 
 __all__ = "aff_pop",

@@ -13,6 +13,8 @@ def projection_life():
     gross_product = csv.load(
         "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
     )
+    if None in (expectancy, gross_product):
+        exit(1)
 
     a = np.asarray(expectancy.loc[:, "1900"].values, dtype=np.float32)
     b = np.asarray(gross_product.loc[:, "1900"].values, dtype=np.int32)
