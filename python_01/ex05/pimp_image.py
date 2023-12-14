@@ -1,8 +1,8 @@
-from numpy._typing import _ArrayLike
+from numpy._typing import _ArrayLike as ArrayLike
 import numpy as np
 
 
-def ft_invert(array: _ArrayLike[np.uint8]):
+def ft_invert(array: ArrayLike[np.uint8]):
     """
     Invert the color of a given image in RGB format.
 
@@ -13,7 +13,7 @@ def ft_invert(array: _ArrayLike[np.uint8]):
     ), dtype=np.uint8)
 
 
-def ft_red(array: _ArrayLike[np.uint8]):
+def ft_red(array: ArrayLike[np.uint8]):
     """
     Apply a red filter to a given image in RGB format.
 
@@ -25,7 +25,7 @@ def ft_red(array: _ArrayLike[np.uint8]):
     return new_array
 
 
-def ft_green(array: _ArrayLike[np.uint8]):
+def ft_green(array: ArrayLike[np.uint8]):
     """
     Apply a green filter to a given image in RGB format.
 
@@ -37,7 +37,7 @@ def ft_green(array: _ArrayLike[np.uint8]):
     return new_array
 
 
-def ft_blue(array: _ArrayLike[np.uint8]):
+def ft_blue(array: ArrayLike[np.uint8]):
     """
     Apply a blue filter to a given image in RGB format
 
@@ -49,7 +49,7 @@ def ft_blue(array: _ArrayLike[np.uint8]):
     return new_array
 
 
-def ft_grey(array: _ArrayLike[np.uint8]):
+def ft_grey(array: ArrayLike[np.uint8]):
     """
     Apply a grey filter to a given image in RGB format.
 

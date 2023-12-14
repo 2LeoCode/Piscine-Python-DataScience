@@ -1,6 +1,8 @@
 from typing import TypeVar
 from numpy._typing import _ArrayLike
 from matplotlib import pyplot as plt
+from zoom import zoom
+from load_image import ft_load
 import numpy as np
 
 T = TypeVar("T", bound=np.generic, covariant=True)
@@ -31,15 +33,15 @@ def transpose(data: _ArrayLike[T], axes: tuple[int, ...] | None = None):
     return transposed
 
 
-def rotate():
+def start():
     """
     Rotate the image "animal_zoomed" 90 degrees and display it
     """
     try:
-        img = np.asarray(np.load("animal_zoomed.npy"), dtype=np.uint8)
+        img = zoom(ft_load("animal.jpeg"))
     except Exception as e:
-        print(e)
-        return
+        f"{type(e).__name__}: {e}"
+        exit(1)
     print(f"The shape of the image is {img.shape}\n{img}")
     rotated = transpose(img, (1, 0, 2)).squeeze(axis=2)
     print(rotated)
@@ -48,6 +50,6 @@ def rotate():
 
 
 if __name__ == "__main__":
-    rotate()
+    start()
 
 __all__ = "rotate",

@@ -10,7 +10,6 @@ def ft_load(path: str):
     :param path: the path to the image.
     """
     data = img.imread(path).astype(np.uint8)
-    print(f"The shape of the image is: {data.shape}")
     return data
 
 
