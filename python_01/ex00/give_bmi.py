@@ -13,6 +13,8 @@ def give_bmi(height: list[int | float], weight: list[int | float]):
         )
     ):
         raise TypeError("height and weight must be lists of ints or floats")
+    if len(height) != len(weight):
+        raise ValueError("height and weight must have the same size")
     return [w / h**2 for h, w in zip(height, weight)]
 
 
