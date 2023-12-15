@@ -1,4 +1,5 @@
 from S1E7 import Baratheon, Lannister
+from S1E9 import Character, Stark
 
 
 def print_doc(*args: object):
@@ -36,3 +37,22 @@ print(
     f"Name : {Jaine.first_name, type(Jaine).__name__}, "
     f"Alive : {Jaine.is_alive}"
 )
+
+characters: list[Character] = [
+    Stark("Bran"),
+    Stark("Arya", is_alive=False),
+    Lannister("Cersei"),
+    Lannister("Jaime"),
+    Lannister("Tyrion", is_alive=False),
+    Baratheon("Robert"),
+    Baratheon("Joffrey"),
+]
+
+clones = [c.create_character(f"{c.first_name}_clone", c.is_alive) for c in characters]
+
+print("---")
+for c in characters:
+    print(c)
+print("---")
+for c in clones:
+    print(c)

@@ -11,6 +11,7 @@ class Character(ABC):
     """
 
     first_name: str
+    family_name: str
     is_alive: bool
 
     def __init__(self, first_name: str, is_alive: bool = True):
@@ -50,13 +51,6 @@ class Character(ABC):
         :param is_alive: A boolean to indicate if the character is alive.
         """
         return cls(first_name, is_alive)
-
-    @property
-    def family_name(self):
-        """
-        `Character` family name.
-        """
-        return self.__class__.__name__
 
     def __str__(self):
         """
